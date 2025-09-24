@@ -1,0 +1,47 @@
+<!-- You are designing a "simple student dashboard" for an online course website. Create a small web section that includes:
+
+A breadcrumb showing the path: "Home > Dashboard > My Courses".
+
+A button labeled "Start New Course" using an outline style and medium size.
+
+A heading "My Progress" with a badge inside it showing "3 Courses".
+
+A progress bar showing 70% course completion using a striped and animated colored bar.
+
+A basic pagination section for navigating through pages (1, 2, 3), where page 2 is active -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple student dashboard</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <ul class = "breadcrumb">
+            <li class = "breadcrumb-item"><a href = "#">Home</a></li>
+            <li class = "breadcrumb-item"><a href="#">Dashboard</a></li>
+            <li class = "breadcrumb-item active" aria-current = "page">My Courses</li>
+         </ul>
+         <button type = "button" class = "btn btn-outline-primary ">Start New Course</button><br>
+         
+        <center><h3>My Progress
+            <span class="badge badge-primary">3 Courses</span>
+        </h3></center><br>
+        <h5>PYTHON FULL STACK</h5>
+         <h5>JAVA FULL STACK</h5>
+         <h5>MERN STACK</h5><br>
+        
+         <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:70%">70% Course Completed</div>
+        </div><br>
+        <ul class="pagination justify-content-end">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+    </body>
+</html>
