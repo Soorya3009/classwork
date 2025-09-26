@@ -1,0 +1,107 @@
+<!-- Create a simple FAQ section for a company's support page.
+Each question should be clickable and reveal the answer when clicked. 
+Also, display three profile cards of customer support agents.
+Each card should have a name, role, and a button that reveals a small dropdown with quick actions like "Call", "Email", and "Message". -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Company Support Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <center><h1>Supports and FAQ's</h1></center>
+        
+        <div id = "accordion">
+            <div class = "card">
+               <div class = "card-header">
+                  <a class = "card-link" data-toggle = "collapse" href = "#collapseOne">
+                     How can I reset my password?
+                  </a>
+               </div>
+               <div id = "collapseOne" class = "collapse" data-parent = "#accordion">
+                  <div class = "card-body">
+                    Click on “Forgot Password” on the login page and follow the instructions sent to your registered email address.
+                  </div>
+               </div>
+            </div>
+            <div class = "card">
+               <div class = "card-header">
+                  <a class = "collapsed card-link" data-toggle = "collapse" href = "#collapseTwo">
+                     Where can I check my order status?
+                  </a>
+               </div>
+               <div id = "collapseTwo" class = "collapse" data-parent = "#accordion">
+                  <div class = "card-body">
+                    Log in to your account and go to “My Orders” to track your order status in real-time.
+                  </div>
+               </div>
+            </div>
+            <div class = "card">
+               <div class = "card-header">
+                  <a class = "collapsed card-link" data-toggle = "collapse" href = "#collapseThree">
+                     How do I contact customer support?
+                  </a>
+               </div>
+               <div id ="collapseThree" class = "collapse" data-parent = "#accordion">
+                  <div class = "card-body"> 
+                    You can reach us via email at support@company.com or call our toll-free number 1800-123-456.
+                  </div>
+               </div>
+            </div>
+         </div>
+         <br>
+         <div class="card-deck">
+            <div class="card bg-info text-white">  
+                 <div class="card-body text-center">
+                     <h4 class="card-title">John Smith</h4>
+                     <p class="card-text">Senior Support Agent</p>
+                     <div class ="dropdown">
+                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">Quick Actions</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Call</a>
+                                <a class="dropdown-item" href="#">Email</a>
+                                <a class="dropdown-item" href="#">Message</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-info text-white">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Emily Davis</h4>
+                    <p class="card-text">Technical Specialist</p>
+                    <div class="dropdown">
+                         <button type="button" class="btn btn-light dropdown-toggle"
+                    data-toggle="dropdown">Quick Actions</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Call</a>
+                            <a class="dropdown-item" href="#">Email</a>
+                             <a class="dropdown-item" href="#">Message</a>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="card bg-info text-white">
+                 <div class="card-body text-center">
+                    <h4 class="card-title">Michael Lee</h4>
+                    <p class="card-text">Customer Care Executive</p>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-light dropdown-toggle"
+                        data-toggle="dropdown">Quick Actions</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Call</a>
+                                <a class="dropdown-item" href="#">Email</a>
+                                <a class="dropdown-item" href="#">Message</a>
+                            </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </body>
+</html>
