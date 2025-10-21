@@ -1,0 +1,40 @@
+ <!-- You are helping to build a basic item return page for an online store. 
+When a customer clicks a button, the script should do the following:
+Create an object named order with the following details: itemName, isDelivered, and daysSinceDelivery.
+When the button is clicked, check if:
+the item has been delivered (isDelivered is true)
+and the item was delivered within the last 7 days
+If both are true, display “Eligible for Return”, otherwise display “Return Period Expired” — without using if-else.
+Also:
+Check if the itemName property exists in the object.
+Then remove the daysSinceDelivery property using a suitable operator. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW JS DAY 5</title>
+</head>
+    <body>  <button id="checkReturn">Check Return Eligibility</button>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('checkReturn').addEventListener('click', () => {
+            let order={
+                itemName:"mobile",
+                isDelivered:true,
+                daysSinceDelivery:5
+            }
+            let message = (order.isDelivered && order.daysSinceDelivery <= 7) && 'Eligible for Return'
+                    || 'Return Period Expired';
+
+            let hasName = 'itemName' in order;
+            console.log('Has itemName?', hasName);
+            delete order.daysSinceDelivery;
+            console.log('Order object after deletion:', order);
+        });
+    </script>
+</body>
+</html>

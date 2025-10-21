@@ -1,0 +1,78 @@
+<!-- You are helping design a simple product listing feature for an online grocery store. 
+You have an array of product names and an array of their prices. Your tasks are:
+
+Merge the product names and prices into one array in the format: "Product: Apple - Price: 50"
+
+Display all product entries using a loop.
+
+Filter and show only the products with prices greater than 50.
+
+Add a new product "Watermelon" with price 80 to the list, and then display the updated product list. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW JS DAY 6</title>
+</head>
+<body>
+    <p>All products:</p>
+    <p id="demo"></p>
+    <p>Products with prices greater than 50</p>
+    <p id="demo1"></p>
+    <p>The updated product list</p>
+    <p id="demo2"></p>
+    <script>
+        var product_names =["Apple","Orange","Grapes","Mango"];
+        var product_prices=[50,100,30,60];
+        var products=[];
+        for(let i=0;i<product_names.length;i++)
+        {
+           var prdt = "Product: "+product_names[i]+" - Price: "+product_prices[i];
+            products.push(prdt);
+        }
+        var text="<ul>";
+        for(i=0;i<products.length;i++)
+        {
+            text+= "<li>"+products[i]+"</li>";
+        }
+        document.getElementById("demo").innerHTML=text;
+        text="</ul>";
+        var product_50=[];
+        
+        for(i=0;i<product_names.length;i++)
+        {   
+            if(product_prices[i]>50)
+            {
+                var prdt_50 ="<li>"+"Product: "+product_names[i]+" - Price: "+product_prices[i]+"</li>" ;
+                product_50.push(prdt_50);
+            }
+        }
+        var text1="<ul>";
+        for(i=0;i<product_50.length;i++)
+        {
+            text1+= "<li>"+product_50[i]+"</li>";
+        }
+        document.getElementById("demo1").innerHTML=text1;
+        text1="</ul>";
+        product_names.push("Watermelon");
+        product_prices.push(80);
+        var product_upt=[];
+         for(let i=0;i<product_names.length;i++)
+        {
+           var prdt_upt = "Product: "+product_names[i]+" - Price: "+product_prices[i];
+            product_upt.push(prdt_upt);
+        }
+        var text="<ul>";
+        for(i=0;i<product_upt.length;i++)
+        {
+            text+= "<li>"+product_upt[i]+"</li>";
+        }
+        document.getElementById("demo2").innerHTML=text;
+        text="</ul>";
+        
+    </script>
+</body>
+</html>

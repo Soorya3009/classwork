@@ -1,0 +1,78 @@
+
+<!-- Create a simple webpage section to display three promotional banners for a travel website using a sliding banner. 
+Each banner should include an image and a short message over it. 
+Also, add a "Book Now" button that opens a pop-up message with more details.
+Use only Bootstrap's built-in classes—no JavaScript writing needed. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="promotion" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#promotion" data-slide-to="0" class="active"></li>
+            <li data-target="#promotion" data-slide-to="1"></li>
+            <li data-target="#promotion" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+             <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Ocean" width="2000" height="750">
+                 <div class="carousel-caption bg-dark  rounded">
+                    <h1 class="text-white">Relax by Ocean</h1>
+                    <p>Enjoy your dream vacation at serene beaches.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#promoModal">Book Now</button>
+                </div> 
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Mountains" width="2000" height="750">
+                <div class="carousel-caption bg-dark rounded">
+                    <h3>Adventure in the Mountains</h3>
+                    <p>Experience nature at its peak with exciting hikes.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#promoModal">Book Now</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="City" width="2000" height="750">
+                <div class="carousel-caption bg-dark rounded">
+                    <h3>Explore the City Lights</h3>
+                    <p>Discover new cultures and experiences in vibrant cities.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#promoModal">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#promotion" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#promotion" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    <div class="modal fade" id="promoModal">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Booking Information</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Thank you for your interest! Our booking team will assist you with destination details, packages, and best travel dates.</p>
+                            <p><strong>Contact us:</strong> travel@skyway.com</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Proceed to Booking</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+</body>
+</html>

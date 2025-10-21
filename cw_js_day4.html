@@ -1,0 +1,38 @@
+<!-- You are building a small statistics widget for a website.
+Generate a random whole number between 1 and 100.
+Simulate a user score as a string value (like "75").
+Convert the user score string to a number using type conversion (without using any conditionals).
+Show the difference between the random number and user score.
+Show the rounded square root of the user score.
+Show the π constant (pi) from JavaScript.
+Convert the string "50" to a number using implicit conversion and multiply it by 2. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW JS DAY 4</title>
+</head>
+<body>
+
+    <script>
+        let random = Math.floor(Math.random() * 100) + 1;
+        let userscore="75";
+        let numeric=Number(userscore);
+        let difference = Math.abs(random - numeric);
+        let rndsqrt=Math.round(Math.sqrt(numeric));
+        let pivalue=Math.PI;
+        let implicit="50"*2;
+
+        console.log("Random Whole Number:", random);
+        console.log("userscore:",userscore)
+        console.log("Differnce btw random number and user score:",difference);
+        console.log("Rounded square root:",rndsqrt);
+        console.log("Pi:",pivalue);
+        console.log("50*2:",implicit);
+
+    </script>
+</body>
+</html>

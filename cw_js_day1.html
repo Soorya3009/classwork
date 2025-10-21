@@ -1,0 +1,39 @@
+<!-- You are helping a small online store keep track of its sales. The store sold 5 t-shirts, each for ₹400, and 3 caps, each for ₹150.
+Your task is to:
+Create variables to store the number of items sold and their prices.
+Calculate the total earnings from the sales.
+Display the total earnings.
+Change the price of the t-shirts to ₹450 and recalculate the total earnings.
+Print the updated total -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 CW</title>
+</head>
+<body>
+    <p>Total earnings from the sales:</p>
+    <p id="total"></p>
+
+    <p>Updated total earning :</p>
+    <p id="update"></p>
+    <script>
+        var tshirt_sold=5;
+        var caps_sold=3;
+
+        var tshirt_price=400;
+        var caps_price=150;
+
+        var x=(tshirt_sold*tshirt_price)+(caps_sold*caps_price);
+        document.getElementById("total").innerHTML = x;
+
+        tshirt_price=450;
+        var x=(tshirt_sold*tshirt_price)+(caps_sold*caps_price);
+        document.getElementById("update").innerHTML = x;
+    </script>
+    
+</body>
+</html>
