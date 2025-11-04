@@ -1,0 +1,29 @@
+ <!-- You are helping with a basic user comment system for a website. Your task is to write JavaScript code that does the following:
+Check if a user comment contains any digits (like ages, amounts, or phone numbers).
+If digits are found, replace them with the word "NUMBER" (case-insensitive and for all matches).
+Return both:
+Whether a number was found (true/false)
+The updated comment with numbers replaced
+Test the code using this comment:
+ "My son is 12 years old. Our flat number is 45 and contact is 9876543210." -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW JS day 9</title>
+ </head>
+ <body>
+    <p id="result"></p>
+    <script>
+        var comment="My son is 12 years old. Our flat number is 45 and contact is 9876543210.";
+        var reg=/\d+/g;
+        var digit_found=reg.test(comment);
+        var updated_comment = comment.replace(reg,"NUMBER");
+        document.getElementById("result").innerHTML = `<b>Number Found:</b> ${digit_found}<br><b>Updated Comment:</b> ${updated_comment}`;
+
+    </script>
+ </body>
+ </html>
